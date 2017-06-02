@@ -4,34 +4,38 @@
 </div>
 
 <div id="ajax-demo">
-  <h2>test Ajax</h2>
+  <h4>test Ajax</h4>
   <form>
     Enter number:<br>
     <input type="text" id="inum" name="inum"<br>
+    <button id="load-num" type="button" >Load Num</button>
   </form>
-  <button id="load-num" type="button" >Load Num</button>
   <p id="showNum"></p>
+</div>
+<div id="json-demo">
+  <h4>JSON Demo</h4>
+  <button id="get-data" type="button">Get Data</button>
+  <p id="show-data"></p>
 </div>
 <div id="js-test"></div>
 
 <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
 
-  <script>run(function(){require("js/hello").Hello.sayHello("index");})</script>
   <script>require("js/app").App.hello()</script>
   <script>require("js/hello2").Hello2.sayHello("index")</script>
   <script>
-    he = require("js/hello");
-    he.Hello.sayHello("a");
+    // he = require("js/hello");
+    //he.Hello.sayHello("a");
 
     //import Hello from "./hello.js";
     //Hello.sayHello("index app");
   </script>
   <script>
-  function putHello(msg) {
-    console.log( msg);
-  }
+    function putHello(msg) {
+      console.log( msg);
+    }
 
-putHello("yo");
+    putHello("yo");
   </script>
 
 

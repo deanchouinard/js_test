@@ -17,6 +17,7 @@ defmodule JsTest.Web.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/view", PageController, :view
     get "/:id", PageController, :show
   end
 

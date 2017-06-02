@@ -9,4 +9,9 @@ defmodule JsTest.Web.PageController do
     text conn, "#{id}"
   end
 
+  def view(conn, _params) do
+    IO.puts "view"
+    json conn, %{name: "Dean"}
+  end
+
 end

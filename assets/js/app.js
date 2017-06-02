@@ -25,6 +25,13 @@ lnButton.addEventListener("click", e => {
   GNum.loadNum()
 })
 
+import GData from "./j_ajax.js"
+let ldButton = document.getElementById("get-data");
+ldButton.addEventListener("click", e => {
+  console.log("event");
+  GData.loadData("view", "show-data")
+})
+
 import Hello from "./hello.js"
 
 Hello.sayHello("app");
