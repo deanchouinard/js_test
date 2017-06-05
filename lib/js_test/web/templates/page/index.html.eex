@@ -19,10 +19,10 @@
 </div>
 <div id="js-test"></div>
 
-<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+<script src="<%= #static_path(@conn, "/js/app.js") %>"></script>
 
-  <script>require("js/app").App.hello()</script>
-  <script>require("js/hello2").Hello2.sayHello("index")</script>
+  <script>//require("js/app").App.hello()</script>
+  <script>// require("js/hello2").Hello2.sayHello("index")</script>
   <script>
     // he = require("js/hello");
     //he.Hello.sayHello("a");

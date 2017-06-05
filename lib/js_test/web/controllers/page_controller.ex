@@ -14,4 +14,7 @@ defmodule JsTest.Web.PageController do
     json conn, %{name: "Dean"}
   end
 
+  def modal(conn, _params) do
+    render conn, "modal.html"
+  end
 end

@@ -21,16 +21,20 @@ import "phoenix_html"
 // import socket from "./socket"
 import GNum from "./ajax.js"
 let lnButton = document.getElementById("load-num");
-lnButton.addEventListener("click", e => {
-  GNum.loadNum()
-})
+if (lnButton) {
+  lnButton.addEventListener("click", e => {
+    GNum.loadNum()
+  })
+}
 
 import GData from "./j_ajax.js"
 let ldButton = document.getElementById("get-data");
-ldButton.addEventListener("click", e => {
-  console.log("event");
-  GData.loadData("view", "show-data")
-})
+if (ldButton) {
+  ldButton.addEventListener("click", e => {
+    console.log("event");
+    GData.loadData("view", "show-data")
+  })
+}
 
 import Hello from "./hello.js"
 
@@ -45,4 +49,17 @@ if(jtest) {
   console.log("jtest found");
   jtest.innerHTML = "<h3>jtest</h3>";
 }
+
+// var $ = require('jquery')
+import $ from "jquery"
+import "jquery"
+
+// global.jQuery = require("jquery")
+global.bootstrap = require("bootstrap")
+
+console.log('using jquery', $('body'));
+
+// import "bootstrap.js"
+// import "./bootstrap"
+$.fn.tooltip.Constructor.VERSION
 

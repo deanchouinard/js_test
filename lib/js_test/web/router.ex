@@ -18,6 +18,7 @@ defmodule JsTest.Web.Router do
 
     get "/", PageController, :index
     get "/view", PageController, :view
+    get "/modal", PageController, :modal
     get "/:id", PageController, :show
   end
 

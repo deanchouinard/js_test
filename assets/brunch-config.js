@@ -53,7 +53,7 @@ exports.config = {
 
   modules: {
     autoRequire: {
-      "js/app.js": ["js/app"]
+      "js/app.js": ["jquery", "js/app"]
     }
   },
 
@@ -61,6 +61,7 @@ exports.config = {
     enabled: true,
     styles: {
       bootstrap: ["dist/css/bootstrap.css"]
-    }
+    },
+    globals: {"jQuery": "jquery"}
   }
 };
