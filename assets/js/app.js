@@ -63,3 +63,28 @@ console.log('using jquery', $('body'));
 // import "./bootstrap"
 $.fn.tooltip.Constructor.VERSION
 
+function myFunction(xhttp) {
+  $('h1').html(xhttp.response.Text);
+}
+
+import http_request from "./xml_http_request.js"
+
+let mdialog = document.getElementById("btnLaunch")
+if (mdialog) {
+  $(function() {
+    $('#btnLaunch').click(function() {
+      $('#myModal').modal('show');
+    });
+
+    $('#btnSave').click(function() {
+      var value = $('input').val();
+      var cUrl = "/api/" + value;
+      http_request.loadDoc(cUrl, myFunction);
+//      $('h1').html(value);
+      $('#myModal').modal('hide');
+    });
+  });
+}
+
+
+

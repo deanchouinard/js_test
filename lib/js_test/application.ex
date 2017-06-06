@@ -14,6 +14,8 @@ defmodule JsTest.Application do
       supervisor(JsTest.Web.Endpoint, []),
       # Start your own worker by calling: JsTest.Worker.start_link(arg1, arg2, arg3)
       # worker(JsTest.Worker, [arg1, arg2, arg3]),
+      worker(JsTest.Worker, []),
+      #JsTest.Worker.start_link(),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

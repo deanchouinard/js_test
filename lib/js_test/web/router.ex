@@ -25,5 +25,8 @@ defmodule JsTest.Web.Router do
   # Other scopes may use custom stacks.
   scope "/api", JsTest.Web do
     pipe_through :api
+
+    get "/list", ApiController, :show
+    get "/:item", ApiController, :add
   end
 end
