@@ -7,6 +7,7 @@ defmodule JsTest.Web.ApiController do
 
   def add(conn, %{"item" => item}) do
     JsTest.Worker.add_item(item)
+    IO.puts "api add"
     json conn, %{item: item}
   end
 

@@ -64,7 +64,18 @@ console.log('using jquery', $('body'));
 $.fn.tooltip.Constructor.VERSION
 
 function myFunction(xhttp) {
-  $('h1').html(xhttp.response.Text);
+  console.log("myFunction");
+  $('h1').html(xhttp.responseText);
+  $("#dlist").append("<li>" + JSON.parse(xhttp.responseText).item + "</li>");
+  console.log(xhttp.responseText);
+}
+
+function displayList(xhttp) {
+  var list = JSON.parse(xhttp.responseText);
+  console.log(list);
+  for (var x in list.items) {
+    $("#slist").append("<li>" + list.items[x] + "</li>");
+  }
 }
 
 import http_request from "./xml_http_request.js"
@@ -83,6 +94,12 @@ if (mdialog) {
 //      $('h1').html(value);
       $('#myModal').modal('hide');
     });
+
+    $("#btnShow").click(function() {
+      var cUrl = "/api/list"
+      http_request.loadDoc(cUrl, displayList);
+    });
+
   });
 }
 

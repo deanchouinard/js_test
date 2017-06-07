@@ -29,3 +29,8 @@
 
   </div>
 </div>
+<ul id="dlist"></ul>
+
+<button type="button" id="btnShow" class="btn btn-primary">Show List</button>
+
+<ul id="slist"></ul>
